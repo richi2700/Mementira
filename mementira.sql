@@ -1,22 +1,20 @@
 -- phpMyAdmin SQL Dump
--- version 4.7.4
--- https://www.phpmyadmin.net/
+-- version 3.5.1
+-- http://www.phpmyadmin.net
 --
--- Servidor: 127.0.0.1:3306
--- Tiempo de generación: 04-02-2018 a las 01:05:45
--- Versión del servidor: 5.7.19
--- Versión de PHP: 5.6.31
+-- Servidor: localhost
+-- Tiempo de generación: 06-02-2018 a las 02:22:40
+-- Versión del servidor: 5.5.24-log
+-- Versión de PHP: 5.4.3
 
-SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-SET AUTOCOMMIT = 0;
-START TRANSACTION;
+SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
 
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
 /*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
-/*!40101 SET NAMES utf8mb4 */;
+/*!40101 SET NAMES utf8 */;
 
 --
 -- Base de datos: `mementira`
@@ -25,21 +23,50 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `tblmeme`
+-- Estructura de tabla para la tabla `tblgif`
 --
 
-DROP TABLE IF EXISTS `tblmeme`;
-CREATE TABLE IF NOT EXISTS `tblmeme` (
-  `IdMeme` int(11) NOT NULL,
-  `Nombre` varchar(100) DEFAULT NULL,
-  `Email` varchar(100) DEFAULT NULL,
-  `Titulo` varchar(200) DEFAULT NULL,
-  `Tipo` varchar(50) DEFAULT NULL,
-  `Archivo` longblob,
-  `Categoria` varchar(200) DEFAULT NULL,
-  PRIMARY KEY (`IdMeme`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8 COMMENT='Tabla de memes';
-COMMIT;
+CREATE TABLE IF NOT EXISTS `tblgif` (
+  `ID` int(11) NOT NULL AUTO_INCREMENT,
+  `gif` longblob NOT NULL,
+  `titulo` varchar(30) NOT NULL,
+  `fecha` date NOT NULL,
+  `autor` varchar(30) NOT NULL,
+  `nota` varchar(30) NOT NULL,
+  PRIMARY KEY (`ID`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `tblimagenes`
+--
+
+CREATE TABLE IF NOT EXISTS `tblimagenes` (
+  `ID` int(11) NOT NULL AUTO_INCREMENT,
+  `imagen` longblob NOT NULL,
+  `titulo` varchar(30) NOT NULL,
+  `fecha` date NOT NULL,
+  `autor` varchar(30) NOT NULL,
+  `nota` varchar(30) NOT NULL,
+  PRIMARY KEY (`ID`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `tblvideos`
+--
+
+CREATE TABLE IF NOT EXISTS `tblvideos` (
+  `ID` int(11) NOT NULL AUTO_INCREMENT,
+  `video` int(11) NOT NULL,
+  `titulo` varchar(30) NOT NULL,
+  `fecha` date NOT NULL,
+  `autor` varchar(30) NOT NULL,
+  `nota` varchar(30) NOT NULL,
+  PRIMARY KEY (`ID`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
