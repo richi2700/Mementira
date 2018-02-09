@@ -1,2 +1,0 @@
-# MEMENTIRA
-Pagina de memes

@@ -1,7 +1,21 @@
 <?php
-    $Conexion = mysqli_connect("localhos","root","","MEMENTIRA");
+$host = "localhost";
+$user = "root";
+$basedatos = "mementira";
 
-    if (!$Conexion) {
-    echo "<h1 style='color:red'>Error al intentar establecer la conexion con el servidor: </h1>" . mysqli_connect_error();
-    }
-?>
+try{
+    $Conexion = mysqli_connect($host, $user,"", $basedatos);
+}
+catch(Exception $e)
+{
+    echo "Linea de error:  ". $e->getMessage();
+}
+
+
+//if ($Conexion) {
+//    echo "Conectado";
+//}
+//else{
+//    die("Error al intentar conectar con la base de datos: " . $Conexion->connect_errno. ": " . $Conexion->connect_error);
+//}
+
