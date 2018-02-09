@@ -1,9 +1,0 @@
-es que yo pensaba que era en el mementira que esta aghi afuera no sabe que era en la que dice nuevo
-
-
-na es que ahorita habia una carpeta de mementira medida adentro de otra y staba un lio asi pero tambien si metes algo en la carpeta de atras y lo mandas tambien se envia esto es como si fuera una carpta en red solo ue para neviar vainas a la nube tienes que hacerlo atravez de netbeans que es el que esta conectado con los permisos de subir vainas 
-
-asecha 
-si yo guardo este document y hago push 
-se manda al git
-entra a la pagina de git para que lo veas envivo XD 
