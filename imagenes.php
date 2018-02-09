@@ -67,6 +67,11 @@
             mysqli_close($Conexion);
         }
          display();
+         
+         for($i = 0;$i <= $total_paginas; $i++)
+             {
+                 echo " " . $i . " ";
+             }
                 
 ?>
         </div>
