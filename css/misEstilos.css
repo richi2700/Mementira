@@ -17,7 +17,8 @@ img{
 
 text-shadow: 1px 1px 2px #744AFF;
 font-weight:bold;
-background: -moz-linear-gradient(top, rgba(97,178,244,1) 0%, rgba(171,211,238,1) 50%, rgba(35,154,234,1) 51%, rgba(124,197,249,1) 100%);
+background: -webkit-linear-gradient(top, rgba(76,76,76,1) 0%,rgba(89,89,89,1) 12%,rgba(102,102,102,1) 25%,rgba(71,71,71,1) 39%,rgba(44,44,44,1) 50%,rgba(0,0,0,1) 51%,rgba(17,17,17,1) 60%,rgba(43,43,43,1) 76%,rgba(28,28,28,1) 91%,rgba(19,19,19,1) 100%);
+background: -moz-linear-gradient(top, rgba(76,76,76,1) 0%, rgba(89,89,89,1) 12%, rgba(102,102,102,1) 25%, rgba(71,71,71,1) 39%, rgba(44,44,44,1) 50%, rgba(0,0,0,1) 51%, rgba(17,17,17,1) 60%, rgba(43,43,43,1) 76%, rgba(28,28,28,1) 91%, rgba(19,19,19,1) 100%);
 border-radius: 20px 20px 0px 0px;
 color: white;  
 letter-spacing:1pt;
@@ -25,7 +26,7 @@ word-spacing:2pt;
 font-size:70px;
 text-align:center;
 font-family:lucida sans unicode, lucida grande, sans-serif;
-box-shadow: 5px 10px 8px #6699ff;
+box-shadow: 5px 10px 8px gray;
 padding-left: 10px;
 padding-right: 10px;
 }
@@ -35,7 +36,8 @@ padding-right: 10px;
 text-shadow: 1px 1px 2px #744AFF;
 font-weight:bold;
 color:#1E388F;
-background: -moz-linear-gradient(top, rgba(30,87,153,1) 0%, rgba(41,137,216,1) 50%, rgba(32,124,202,1) 51%, rgba(125,185,232,1) 100%);
+background: -webkit-linear-gradient(top, rgba(76,76,76,1) 0%,rgba(89,89,89,1) 12%,rgba(102,102,102,1) 25%,rgba(71,71,71,1) 39%,rgba(44,44,44,1) 50%,rgba(0,0,0,1) 51%,rgba(17,17,17,1) 60%,rgba(43,43,43,1) 76%,rgba(28,28,28,1) 91%,rgba(19,19,19,1) 100%);
+background: -moz-linear-gradient(top, rgba(76,76,76,1) 0%, rgba(89,89,89,1) 12%, rgba(102,102,102,1) 25%, rgba(71,71,71,1) 39%, rgba(44,44,44,1) 50%, rgba(0,0,0,1) 51%, rgba(17,17,17,1) 60%, rgba(43,43,43,1) 76%, rgba(28,28,28,1) 91%, rgba(19,19,19,1) 100%);
 border-radius: 0px 0px 20px 20px;
 color: white;  
 letter-spacing:1pt;
@@ -48,13 +50,14 @@ padding-right: 10px;
 }
 
 #infoPagina{
-    background: -moz-linear-gradient(top, #e4f5fc 0%, #bfe8f9 50%, #9fd8ef 53%, #2ab0ed 100%);
+   background: -moz-linear-gradient(top, rgba(174,188,191,1) 0%, rgba(110,119,116,1) 19%, rgba(10,14,10,1) 55%, rgba(10,8,9,1) 100%);
+    background: -webkit-linear-gradient(top, rgba(174,188,191,1) 0%,rgba(110,119,116,1) 19%,rgba(10,14,10,1) 55%,rgba(10,8,9,1) 100%);
     
     display: inline-flex;
     border-radius: 20px 20px 0px 0px;
     padding-left: 10px;
     padding-right: 10px;
-    
+    color: white;
     margin-left: 20px;
     font-family:lucida sans unicode, lucida grande, sans-serif;
 }
