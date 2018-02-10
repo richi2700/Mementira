@@ -3,11 +3,11 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/wamp64/www/MEMENTIRA/Conexion.php</file>
-            <file>file:/C:/wamp64/www/MEMENTIRA/gifs.php</file>
-            <file>file:/C:/wamp64/www/MEMENTIRA/SubirDatos.php</file>
-            <file>file:/C:/wamp64/www/MEMENTIRA/imagenes.php</file>
-            <file>file:/C:/wamp64/www/MEMENTIRA/css/misEstilos.css</file>
+            <file>file:/C:/wamp64/www/Mementira/Conexion.php</file>
+            <file>file:/C:/wamp64/www/Mementira/Imagenes.php</file>
+            <file>file:/C:/wamp64/www/Mementira/conect-db.php</file>
+            <file>file:/C:/wamp64/www/Mementira/index.php</file>
+            <file>file:/C:/wamp64/www/Mementira/SubirDatos.php</file>
         </group>
     </open-files>
 </project-private>

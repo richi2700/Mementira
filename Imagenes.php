@@ -34,46 +34,51 @@
         </div>
         <div class="container align-items-center">
           
-                     <?php
-        function display()
-        {
-            $host = "localhost";
-            $user = "root";
-            $basedatos = "mementira";
-            $tamano_pagina = 10;
-            $pagina = 1;
-            $empezar_desde = ($pagina-1) * $tamano_pagina;
-            
+       <?php
+          include 'Conexion.php';
+          $por_pagina = 1;
+          $pagina = 1;
 
-            $Conexion = mysqli_connect($host, $user,"", $basedatos);
-            $query = "SELECT * FROM tblimagenes LIMIT $empezar_desde,$tamano_pagina";
-            
-            $resultado = mysqli_query($Conexion,$query);
-            $num_filas = mysqli_num_rows($resultado);
-            $total_paginas = ceil($num_filas / $tamano_pagina);
-            
-            echo "<richi id='infoPagina'>Total de imagenes: " . $num_filas;
-            echo "Pagina " . $pagina . " de " . $total_paginas . "<br>"."</richi>";
-            $row = array();
-            while ($row = mysqli_fetch_array($resultado)) {
-               echo '<div id="div-imagenes">';
-               echo '<h6 id="titulo" >' . $row['titulo'] . '</h6>';
-               echo '<img id="miimagen" class="img-fluid img-thumbnail rounded" width="800" height="800" src="data:image;base64,'.base64_encode($row['imagen']).'">';
-               echo "<div id = 'autor' class='caption'>". "Autor: " . $row['autor'] ."</div>";
-               echo '</div>';
-               echo "<br>";
-            }
-            mysqli_close($Conexion);
-            for($i = 0;$i <= $total_paginas; $i++)
-             {
-                 echo " " . $i . " ";
-             }
+          if (isset($_GET['pagina'])){
+              $pagina = $_GET['pagina'];
+          }
+          else{
+               $pagina = 1;
+          }
+          
+        $empezar_desde = ($pagina-1) * $por_pagina;
+        $querylimit = "SELECT * FROM tblimagenes LIMIT $empezar_desde,$por_pagina";
+        $resultadolimit = mysqli_query($Conexion,$querylimit);
+        $row = array();
+        while ($row = mysqli_fetch_assoc($resultadolimit)) 
+        {
+           echo '<div id="div-imagenes">';
+           echo '<h6 id="titulo" >' . $row['titulo'] . '</h6>';
+           echo '<img id="miimagen" class="img-fluid img-thumbnail rounded" src="data:image;base64,'.base64_encode($row['imagen']).'">';
+           echo "<div id = 'autor' class='caption'>" . "Autor: " . $row['autor'] ."</div>";
+           echo '</div>';
+           echo "<br>";
         }
-         display();
-         
-         
+           
+        ?>
+        </div>
+          <div>
+            <?php
+                include 'Conexion.php';
                 
-?>
+                $query = "SELECT * FROM tblimagenes";
+                $resultado = mysqli_query($Conexion,$query);
+                $num_filas = mysqli_num_rows($resultado);
+                $total_paginas = ceil($num_filas / $por_pagina);
+                
+                echo "<center><a href='Imagenes.php?pagina=1'>".'Primera'."</a>";
+                for($i =1;$i<=$total_paginas;$i++)
+                {
+                    echo "<a href='Imagenes.php?pagina=".$i."'>".$i."</a>";
+                }
+                echo "<a href='Imagenes.php?pagina=$total_paginas'>". ' Ultima'."</a></center>";
+               mysqli_close($Conexion);   
+            ?>
         </div>
         <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
