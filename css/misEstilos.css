@@ -14,8 +14,6 @@ img{
 }
 
 #titulo{
-
-text-shadow: 1px 1px 2px #744AFF;
 font-weight:bold;
 background: -webkit-linear-gradient(top, rgba(76,76,76,1) 0%,rgba(89,89,89,1) 12%,rgba(102,102,102,1) 25%,rgba(71,71,71,1) 39%,rgba(44,44,44,1) 50%,rgba(0,0,0,1) 51%,rgba(17,17,17,1) 60%,rgba(43,43,43,1) 76%,rgba(28,28,28,1) 91%,rgba(19,19,19,1) 100%);
 background: -moz-linear-gradient(top, rgba(76,76,76,1) 0%, rgba(89,89,89,1) 12%, rgba(102,102,102,1) 25%, rgba(71,71,71,1) 39%, rgba(44,44,44,1) 50%, rgba(0,0,0,1) 51%, rgba(17,17,17,1) 60%, rgba(43,43,43,1) 76%, rgba(28,28,28,1) 91%, rgba(19,19,19,1) 100%);
@@ -23,7 +21,7 @@ border-radius: 20px 20px 0px 0px;
 color: white;  
 letter-spacing:1pt;
 word-spacing:2pt;
-font-size:70px;
+font-size:25px;
 text-align:center;
 font-family:lucida sans unicode, lucida grande, sans-serif;
 box-shadow: 5px 10px 8px gray;
@@ -32,8 +30,7 @@ padding-right: 10px;
 }
 
 #autor
-{ 
-text-shadow: 1px 1px 2px #744AFF;
+{
 font-weight:bold;
 color:#1E388F;
 background: -webkit-linear-gradient(top, rgba(76,76,76,1) 0%,rgba(89,89,89,1) 12%,rgba(102,102,102,1) 25%,rgba(71,71,71,1) 39%,rgba(44,44,44,1) 50%,rgba(0,0,0,1) 51%,rgba(17,17,17,1) 60%,rgba(43,43,43,1) 76%,rgba(28,28,28,1) 91%,rgba(19,19,19,1) 100%);
@@ -42,7 +39,7 @@ border-radius: 0px 0px 20px 20px;
 color: white;  
 letter-spacing:1pt;
 word-spacing:2pt;
-font-size:30px;
+font-size:20px;
 text-align:center;
 font-family:lucida sans unicode, lucida grande, sans-serif;
 padding-left: 10px;
@@ -62,5 +59,72 @@ padding-right: 10px;
     font-family:lucida sans unicode, lucida grande, sans-serif;
 }
 
+
+div.gallery {
+    margin: 5px;
+    border: 1px solid #ccc;
+    float: left;
+    width: 30%;
+    font-size:50px;
+}
+
+div.gallery:hover {
+    width: 50%;
+     transition-duration: 0.5s;
+}
+
+div.gallery img {
+    width: 100%;
+    height: auto;
+    
+}
+
+div.desc {
+    padding: 15px;
+    text-align: center;
+}
+
+#primera
+{
+background: -webkit-linear-gradient(top, rgba(76,76,76,1) 0%,rgba(89,89,89,1) 12%,rgba(102,102,102,1) 25%,rgba(71,71,71,1) 39%,rgba(44,44,44,1) 50%,rgba(0,0,0,1) 51%,rgba(17,17,17,1) 60%,rgba(43,43,43,1) 76%,rgba(28,28,28,1) 91%,rgba(19,19,19,1) 100%);
+background: -moz-linear-gradient(top, rgba(76,76,76,1) 0%, rgba(89,89,89,1) 12%, rgba(102,102,102,1) 25%, rgba(71,71,71,1) 39%, rgba(44,44,44,1) 50%, rgba(0,0,0,1) 51%, rgba(17,17,17,1) 60%, rgba(43,43,43,1) 76%, rgba(28,28,28,1) 91%, rgba(19,19,19,1) 100%);
+border-radius: 20px 0px 0px 20px;
+color: white;  
+font-size: 16px;
+text-align:center;
+font-family:lucida sans;
+box-shadow: 5px 10px 8px gray;
+padding-left: 10px;
+padding-right: 10px;
+}
+
+#paginas
+{
+background: -webkit-linear-gradient(top, rgba(76,76,76,1) 0%,rgba(89,89,89,1) 12%,rgba(102,102,102,1) 25%,rgba(71,71,71,1) 39%,rgba(44,44,44,1) 50%,rgba(0,0,0,1) 51%,rgba(17,17,17,1) 60%,rgba(43,43,43,1) 76%,rgba(28,28,28,1) 91%,rgba(19,19,19,1) 100%);
+background: -moz-linear-gradient(top, rgba(76,76,76,1) 0%, rgba(89,89,89,1) 12%, rgba(102,102,102,1) 25%, rgba(71,71,71,1) 39%, rgba(44,44,44,1) 50%, rgba(0,0,0,1) 51%, rgba(17,17,17,1) 60%, rgba(43,43,43,1) 76%, rgba(28,28,28,1) 91%, rgba(19,19,19,1) 100%);
+color: white;  
+font-size:16px;
+text-align:center;
+font-family:lucida sans unicode;
+box-shadow: 5px 10px 8px gray;
+padding-left: 10px;
+padding-right: 10px;
+}
+
+#ultima
+{
+background: -webkit-linear-gradient(top, rgba(76,76,76,1) 0%,rgba(89,89,89,1) 12%,rgba(102,102,102,1) 25%,rgba(71,71,71,1) 39%,rgba(44,44,44,1) 50%,rgba(0,0,0,1) 51%,rgba(17,17,17,1) 60%,rgba(43,43,43,1) 76%,rgba(28,28,28,1) 91%,rgba(19,19,19,1) 100%);
+background: -moz-linear-gradient(top, rgba(76,76,76,1) 0%, rgba(89,89,89,1) 12%, rgba(102,102,102,1) 25%, rgba(71,71,71,1) 39%, rgba(44,44,44,1) 50%, rgba(0,0,0,1) 51%, rgba(17,17,17,1) 60%, rgba(43,43,43,1) 76%, rgba(28,28,28,1) 91%, rgba(19,19,19,1) 100%);
+border-radius: 0px 20px 20px 0px;
+color: white;  
+letter-spacing:1pt;
+word-spacing:2pt;
+font-size:16px;
+text-align:center;
+font-family:lucida sans;
+box-shadow: 5px 10px 8px gray;
+padding-left: 10px;
+padding-right: 10px;
+}
 
 

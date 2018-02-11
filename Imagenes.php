@@ -33,7 +33,7 @@
         <div class="container" style="width:100%;height: 50px">
             
         </div>
-        <div class="container align-items-center">
+<div class="container align-items-center">
           
        <?php
           include 'Conexion.php';
@@ -53,9 +53,11 @@
         $row = array();
         while ($row = mysqli_fetch_assoc($resultadolimit)) 
         {
-           echo '<div id="div-imagenes">';
-           echo '<h6 id="titulo" >' . $row['titulo'] . '</h6>';
-           echo '<img id="miimagen" class="img-fluid img-thumbnail rounded" src="data:image;base64,'.base64_encode($row['imagen']).'">';
+           echo '<div class="gallery">';
+           echo '<div class="desc" id= "titulo">' . $row['titulo'] . '</div>';
+           echo '<a target="_blank"  href="data:image;base64,'.base64_encode($row['imagen']).'">';
+           echo '<img class="img-fluid img-thumbnail rounded" width="1200" height="800" src="data:image;base64,'.base64_encode($row['imagen']).'">';
+           echo '</a>';
            echo "<div id = 'autor' class='caption'>" . "Autor: " . $row['autor'] ."</div>";
            echo '</div>';
            echo "<br>";
@@ -63,6 +65,7 @@
            
         ?>
         </div>
+
           <div>
             <?php
                 include 'Conexion.php';
@@ -72,15 +75,15 @@
                 $num_filas = mysqli_num_rows($resultado);
                 $total_paginas = ceil($num_filas / $por_pagina);
                 
-                echo "<center><a href='Imagenes.php?pagina=1'>".'Primera'."</a>";
+                echo "<center><a href='Imagenes.php?pagina=1' id= 'primera'>".'Primera'."</a>";
                 for($i =1;$i<=$total_paginas;$i++)
                 {
-                    echo "<a href='Imagenes.php?pagina=".$i."'>".$i."</a>";
+                    echo "<a id ='paginas' href='Imagenes.php?pagina=".$i."'>".$i."</a>";
                 }
-                echo "<a href='Imagenes.php?pagina=$total_paginas'>". ' Ultima'."</a></center>";
+                echo "<a id = 'ultima' href='Imagenes.php?pagina=$total_paginas'>". ' Ultima'."</a></center>";
                mysqli_close($Conexion);   
             ?>
-        </div>
+            </div>
         <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
