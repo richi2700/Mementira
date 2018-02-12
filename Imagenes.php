@@ -2,12 +2,14 @@
 <html>
     <head>
         <title>MEMENTIRA</title>
+        <link href="https://fonts.googleapis.com/css?family=Nova+Flat" rel="stylesheet">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
         <link rel="stylesheet" href="css/misEstilos.css">
+        <link rel="stylesheet" href="css/FuentesGoogle.css">
     </head>
     
     <body>
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
             </button>
@@ -18,10 +20,7 @@
                   <a class="nav-link" href="index.php">RECIENTES<span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="imagenes.php">IMAGENES</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="gifs.php">GIFS</a>
+                    <a class="nav-link" href="imagenes.php">MEMES</a>
                 </li>
               </ul>
               <form class="form-inline my-2 my-lg-0">
@@ -40,7 +39,7 @@
               
                         <?php
                            include 'Conexion.php';
-                           $por_pagina = 1;
+                           $por_pagina = 6;
                            $pagina = 1;
 
                            if (isset($_GET['pagina'])){
