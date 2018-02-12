@@ -64,13 +64,8 @@ div.gallery {
     margin: 5px;
     border: 1px solid #ccc;
     float: left;
-    width: 30%;
+    width: 70%;
     font-size:50px;
-}
-
-div.gallery:hover {
-    width: 50%;
-     transition-duration: 0.5s;
 }
 
 div.gallery img {
@@ -96,6 +91,12 @@ font-family:lucida sans;
 box-shadow: 5px 10px 8px gray;
 padding-left: 10px;
 padding-right: 10px;
+}
+
+#paginacion
+{
+   padding-left: 25%;
+    
 }
 
 #paginas
@@ -125,6 +126,12 @@ font-family:lucida sans;
 box-shadow: 5px 10px 8px gray;
 padding-left: 10px;
 padding-right: 10px;
+}
+
+#mainColum
+{
+ margin-right: 200px;
+ margin-left: 50px;
 }
 
 
