@@ -34,7 +34,7 @@
         </div>
         
       <div class="container align-items-center" id = "mainColum">      
-          <table border = 1> 
+          <table> 
                         <?php
                            include 'Conexion.php';
                            $por_pagina = 6;
