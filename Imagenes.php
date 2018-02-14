@@ -16,11 +16,11 @@
             <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
               <a class="navbar-brand" href="index.php">MEMENTIRA</a>
               <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
-                <li class="nav-item active">
-                  <a class="nav-link" href="index.php">RECIENTES<span class="sr-only">(current)</span></a>
-                </li>
-                <li class="nav-item">
+               <li class="nav-item  active">
                     <a class="nav-link" href="imagenes.php">MEMES</a>
+                </li>
+                  <li class="nav-item">
+                  <a class="nav-link" href="SubirDatos.php">APORTAR<span class="sr-only">(current)</span></a>
                 </li>
               </ul>
               <form class="form-inline my-2 my-lg-0">
@@ -33,10 +33,8 @@
             
         </div>
         
-      <div class="container align-items-center" id = "mainColum">
-          
-          <table> 
-              
+      <div class="container align-items-center" id = "mainColum">      
+          <table border = 1> 
                         <?php
                            include 'Conexion.php';
                            $por_pagina = 6;
@@ -60,12 +58,15 @@
                             echo '<div class="gallery">';
                             echo '<div class="desc" id= "titulo">' . $row['titulo'] . '</div>';
                             echo '<a target="_blank"  href="data:image;base64,'.base64_encode($row['imagen']).'">';
-                            echo '<img class="img-fluid img-thumbnail rounded" width="1200" height="800" src="data:image;base64,'.base64_encode($row['imagen']).'">';
+                            echo '<img class="img-fluid img-thumbnail rounded" src="data:image;base64,'.base64_encode($row['imagen']).'">';
                             echo '</a>';
                             echo "<div id = 'autor' class='caption'>" . "Autor: " . $row['autor'] ."</div>";
                             echo '</div>';
                             echo "<br>";
                             echo '</td>
+                                <td>
+                                ESPACIO PARA PUBLICIDAD
+                                </td>
                                  </tr>';
                          }
 
@@ -92,11 +93,23 @@
                         </div>
                     </td>
                 </tr>
+                
         </table> 
-    
-        
+          
+          
+          
         <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
     </body>
+    
+    <div id="footer">
+          
+                Informacion de la pagina:<br>
+                desarrolladores:<br>
+                <a href="https://www.facebook.com/ri.chi.161">@Ri chi</a><br>
+                <a href="https://www.facebook.com/Randypj92">@Randy</a><br>
+                
+    </div>
+    
 </html>
