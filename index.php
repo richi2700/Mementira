@@ -33,10 +33,9 @@
         
       <div class="container align-items-center" id = "mainColum">      
                         <?php
-                           
-                         if(!empty($_GET))
+                         if(!empty($_GET['buscar']))
                          {
-                             $busqueda = $_GET["buscar"];
+                            $busqueda = $_GET['buscar'];
                             include 'Conexion.php';
                             $por_pagina = 6;
                             $pagina = 1;
@@ -52,7 +51,7 @@
                             }
 
                              $empezar_desde = ($pagina-1) * $por_pagina;
-                             $query = "SELECT * FROM tblimagenes WHERE titulo = #'$busqueda'#";
+                             $query = "SELECT * FROM tblimagenes WHERE titulo = '$busqueda'";
                              $resultadolimit = mysqli_query($Conexion,$query);
                              $row = array();
                              
