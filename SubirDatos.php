@@ -45,7 +45,7 @@
                         <div class="form-group">
                             <label for="">Tipo de imagen</label>
                             <select class="form-control" id="txtTipo" name="tipoimagen" required>  
-                              <option value="imagen">Imagen</option>
+                              <option value="imagen">jpg,png,jpeg</option>
                               <option value="gif">Gif</option>
                             </select>
                          </div>
@@ -81,10 +81,10 @@
         
         <div id="footer">
           
-                Informacion de la pagina:<br>
+        Informacion de la pagina:<br>
                 desarrolladores:<br>
-                <a href="https://www.facebook.com/ri.chi.161">@Ri chi</a><br>
-                <a href="https://www.facebook.com/Randypj92">@Randy</a><br>
+                <a href="https://www.facebook.com/ri.chi.161" target="_blank" >@Ri chi</a><br>
+                <a href="https://www.facebook.com/Randypj92"  target="_blank" >@Randy</a><br>
         </div>
         
     </body>
@@ -111,23 +111,25 @@
         $imagen = addslashes($_FILES['archivo']['name']);
         $nombretmp = addslashes(file_get_contents($_FILES["archivo"]["tmp_name"]));
         $tipo = addslashes($_FILES['archivo']['type']);
+        $query = "";
+        $insertar = "";
 
         try{
             //TIPO DE IMAGEN A GUARDAR
             if ($tipoimagen == "imagen") {
             $arreglo = array("jpg","jpeg","png");
             $ext = pathinfo($imagen,PATHINFO_EXTENSION);
-            if (in_array($ext, $arreglo)) {
-               $query = "INSERT INTO tblimagenes(imagen,titulo,fecha,autor,nota)values('$nombretmp','$titulo','$fecha','$autor','$nota')"; 
-            }
-            else{
-                echo '<script>alert("El tipo de imagen que intenta subir no es soportado.");</script>';
-            }
-            }
-            else{
-                $arreglo = array("gif");
-                $ext = pathinfo($imagen,PATHINFO_EXTENSION);
                 if (in_array($ext, $arreglo)) {
+                   $query = "INSERT INTO tblimagenes(imagen,titulo,fecha,autor,nota)values('$nombretmp','$titulo','$fecha','$autor','$nota','$tipoimagen')"; 
+                }
+                else{
+                    echo '<script>alert("El tipo de imagen que intenta subir no es soportado.");</script>';
+                }
+            }
+            else{
+                $arreglo1 = array("gif","lol");
+                $ext1 = pathinfo($imagen,PATHINFO_EXTENSION);
+                if (in_array($ext1, $arreglo1)) {
                      $query = "INSERT INTO tblgif(gif,titulo,fecha,autor,nota)values('$nombretmp','$titulo','$fecha','$autor','$nota')";
                 }
             }

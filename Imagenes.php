@@ -19,9 +19,6 @@
                <li class="nav-item  active">
                     <a class="nav-link" href="imagenes.php">MEMES</a>
                 </li>
-                  <li class="nav-item">
-                  <a class="nav-link" href="SubirDatos.php">APORTAR<span class="sr-only">(current)</span></a>
-                </li>
               </ul>
               <form class="form-inline my-2 my-lg-0">
                 <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
