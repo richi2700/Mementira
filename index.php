@@ -52,7 +52,7 @@
                             }
 
                              $empezar_desde = ($pagina-1) * $por_pagina;
-                             $query = "SELECT * FROM tblimagenes WHERE titulo = '$busqueda'";
+                             $query = "SELECT * FROM tblimagenes WHERE titulo = #'$busqueda'#";
                              $resultadolimit = mysqli_query($Conexion,$query);
                              $row = array();
                              
@@ -111,12 +111,12 @@
                                 $num_filas = mysqli_num_rows($resultado);
                                 $total_paginas = ceil($num_filas / $por_pagina);
 
-                                echo "<a href='Imagenes.php?pagina=1' id= 'primera'>".'Primera'."</a>";
+                                echo "<a href='index.php?pagina=1' id= 'primera'>".'Primera'."</a>";
                                 for($i =1;$i<=$total_paginas;$i++)
                                 {
-                                    echo "<a id ='paginas' href='Imagenes.php?pagina=".$i."'>".$i."</a>";
+                                    echo "<a id ='paginas' href='index.php?pagina=".$i."'>".$i."</a>";
                                 }
-                                echo "<a id = 'ultima' href='Imagenes.php?pagina=$total_paginas'>". ' Ultima'."</a>";
+                                echo "<a id = 'ultima' href='index.php?pagina=$total_paginas'>". ' Ultima'."</a>";
                                mysqli_close($Conexion);   
                             ?>
                         </div>
