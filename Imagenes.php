@@ -9,7 +9,7 @@
     </head>
     
     <body>
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark menuTop">
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
             </button>
@@ -34,7 +34,6 @@
         </div>
         
       <div class="container align-items-center" id = "mainColum">      
-          <table> 
                         <?php
                            include 'Conexion.php';
                            $por_pagina = 6;
@@ -53,8 +52,7 @@
                          $row = array();
                          while ($row = mysqli_fetch_assoc($resultadolimit)) 
                          {
-                            echo '<tr> 
-                                  <td>';
+                            
                             echo '<div class="gallery">';
                             echo '<div class="desc" id= "titulo">' . $row['titulo'] . '</div>';
                             echo '<a target="_blank"  href="data:image;base64,'.base64_encode($row['imagen']).'">';
@@ -62,17 +60,12 @@
                             echo '</a>';
                             echo "<div id = 'autor' class='caption'>" . "Autor: " . $row['autor'] ."</div>";
                             echo '</div>';
-                            echo "<br>";
-                            echo '</td>
-                                <td>
-                                ESPACIO PARA PUBLICIDAD
-                                </td>
-                                 </tr>';
                          }
 
                          ?>
-                <tr>
-                    <td>
+          <div id="publicidad">
+              ESPACIO PARA PUBLICIDAD
+          </div>
                         <div id="paginacion">
                             <?php
                                 include 'Conexion.php';
@@ -91,10 +84,7 @@
                                mysqli_close($Conexion);   
                             ?>
                         </div>
-                    </td>
-                </tr>
-                
-        </table> 
+              
           
           
           
